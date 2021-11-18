@@ -1,0 +1,26 @@
+{
+  "name": "submit-answers-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdmchr-Facharbeit/Submit-Answers-Function.git"
+  },
+  "author": "rdmchr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rdmchr-Facharbeit/Submit-Answers-Function/issues"
+  },
+  "homepage": "https://github.com/rdmchr-Facharbeit/Submit-Answers-Function#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "node-appwrite": "^3.0.0"
+  }
+}
