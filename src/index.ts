@@ -11,7 +11,7 @@ client
 //initialise the database SDK
 const db = new Database(client);
 
-const data = JSON.parse (process.env.APPWRITE_FUNCTION_DATA);
+const data = JSON.parse(process.env.APPWRITE_FUNCTION_DATA);
 const dataCollection = process.env.APPWRITE_DATA_COLLECTION;
 const usersCollection = process.env.APPWRITE_USERS_COLLECTION;
 
