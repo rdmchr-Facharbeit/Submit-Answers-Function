@@ -1,5 +1,6 @@
 import { RSA_NO_PADDING } from 'constants';
 import { Client, Database } from 'node-appwrite';
+import {Data, User} from './types'
 
 // initialise the client SDK
 let client = new Client();
@@ -21,8 +22,8 @@ let rating = data.rating;
 
 async function run() {
     // get user doc
-    const userDoc = await db.listDocuments(usersCollection, [`userId=${userId}`]).then((res) => {
-        return res.documents[0];
+    const userDoc: User = await db.listDocuments(usersCollection, [`userId=${userId}`]).then((res) => {
+        return res.documents[0] as User;
     });
 
     if (!userDoc) {
