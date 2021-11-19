@@ -18,6 +18,7 @@ const usersCollection = process.env.APPWRITE_USERS_COLLECTION;
 
 const userId = process.env.APPWRITE_FUNCTION_USER_ID;
 let rating = data.rating;
+let branch = data.branch;
 
 
 async function run() {
@@ -40,14 +41,13 @@ async function run() {
     }
 
     rating = parseInt(rating);
-    if (rating ) {
-    }
 
     // set rating
     await db.updateDocument(usersCollection, userDoc.$id, {
         finished: true,
         finishedAt: new Date().getDate,
         rating,
+        branch,
     }).catch((err) => {
         console.error(`Could not update users doc for user ${userId}`);
         console.error(err);
